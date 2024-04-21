@@ -107,7 +107,7 @@ if (isQuizOver === false) {
                     {choices.map((choice : string, index : number)=>{
                         
                         if (choice) { 
-                        return (  <div className={` ${selectedChoices.includes(choice) ? ' bg-green-800':' bg-green-500'} h-[100px]  rounded-md flex  items-center transition-transform transform hover:scale-110 cursor-pointer`} onClick={()=>{handleClick(choice)}}>
+                        return (  <div key={index} className={` ${selectedChoices.includes(choice) ? ' bg-green-800':' bg-green-500'} h-[100px]  rounded-md flex  items-center transition-transform transform hover:scale-110 cursor-pointer`} onClick={()=>{handleClick(choice)}}>
                         <h1 className=' ml-2 text-white'>{choice}</h1>
     </div>)}
                     })}

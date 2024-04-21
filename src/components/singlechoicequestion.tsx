@@ -107,7 +107,7 @@ useEffect(()=>{
                 <div className=' grid grid-cols-2 grid-rows-2 gap-3 '>
                     {choices.map((choice : string, index : number)=>{
                         if (choice) { 
-                        return (<div className=' bg-green-500 h-[100px] rounded-md flex  items-center transition-transform transform hover:scale-110 cursor-pointer' onClick={()=>{evaluateQuestion(choice) ; console.log(isAnswerCorrect)}}>
+                        return (<div key={index} className=' bg-green-500 h-[100px] rounded-md flex  items-center transition-transform transform hover:scale-110 cursor-pointer' onClick={()=>{evaluateQuestion(choice) ; console.log(isAnswerCorrect)}}>
                             <h1 className=' ml-2 text-white'>{choice}</h1>
                             </div>)}
                     })}

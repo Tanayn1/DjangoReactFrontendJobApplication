@@ -100,7 +100,7 @@ if (isQuizOver === false) {
                 <div className=' grid grid-cols-1 gap-3 '>
                     {choices.map((choice : string, index : number)=>{
                         if (choice) { 
-                        return (<div className=' flex'><input type="checkbox" value={choice}  onChange={(e) => {if (e.target.checked) {
+                        return (<div key={index} className=' flex'><input type="checkbox" value={choice}  onChange={(e) => {if (e.target.checked) {
                             console.log('checked')
                             addItem(choice)
                         } else {console.log('unchecked') 
